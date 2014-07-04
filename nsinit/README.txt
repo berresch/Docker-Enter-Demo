@@ -1,0 +1,1 @@
+After you have installed nsinit via install.sh you have to log out and log in otherwise the environment variable GO_PATH is not in the PATH. But that should be the case if want to execute nsinit manually or via docker-enter.sh!
