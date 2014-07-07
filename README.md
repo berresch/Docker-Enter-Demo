@@ -57,8 +57,11 @@ In order to enter the test container via ssh, just run
 
 In order to enter the test container via nsenter, just run
 > `cd /vagrant/nsenter`
+
 > `./install.sh`
+
 > `sudo su -`
+
 > `./docker-enter.sh`
 
 #### nsinit ####
