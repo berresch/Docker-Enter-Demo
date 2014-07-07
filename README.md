@@ -2,7 +2,7 @@
 
 This demo gives an introduction on how to enter running [Docker][docker] containers. Please see my [blog post][cc-blog] for details.
 
-The demo shows 4 options to enter a running test container:
+The demo shows 4 options to enter a running container:
 
 1. ssh
 2. nsenter
@@ -33,11 +33,11 @@ If you decide to run the demo on a native Linux, please install Docker according
 
 ### 1. Build test container ###
 
-In the first step we need a Docker test container that we can enter. In the `docker` directory exists a `Dockerfile` that builds an ubuntu 13.04 image. When a container of that image is started a sshd process will be started via supervisord. To build and start the test container, just run
-> `cd /vagrant/docker
-> ./run.sh`
+In the first step we need a test container that we can enter. In the `docker` directory exists a `Dockerfile` that builds an ubuntu 13.04 image. When a container of that image is started a sshd process will be started via supervisord. To build and start the test container, just run
+> `cd /vagrant/docker`
+> `./run.sh`
 
-Now you should see the running conatiner named supervisord via
+Now you should see the running container named supervisord via
 > `docker ps`
 
 ### 2. Run Demo ###
@@ -45,43 +45,44 @@ Now you should see the running conatiner named supervisord via
 #### ssh ####
 
 In order to enter the test container via ssh, just run
-> `cd /vagrant/ssh
-> ./install.sh
-> ./docker-enter.sh`
+> `cd /vagrant/ssh`
+> `./install.sh`
+> `./docker-enter.sh`
 
 #### nsenter ####
 
 In order to enter the test container via nsenter, just run
-> `cd /vagrant/nsenter
-> ./install.sh`
-> sudo su -
-> ./docker-enter.sh`
+> `cd /vagrant/nsenter`
+> `./install.sh`
+> `sudo su -`
+> `./docker-enter.sh`
 
 #### nsinit ####
 
-In order to enter the test container via nsenter, just run
-> `cd /vagrant/nsinit
-> sudo su -
-> ./install.sh`
+In order to enter the test container via nsinit, just run
+> `cd /vagrant/nsinit`
+> `sudo su -`
+> `./install.sh`
 
 Now you have to log out and log in as root again because we set some environment variables for go-lang. Afterwards just run
 
-> ./docker-enter.sh`
+> `./docker-enter.sh`
 
 #### lxc-attach ####
 
 In order to enter the test container via lxc-attach, just run
-> `cd /vagrant/lxc-attach
-> ./install.sh`
-> sudo su -
-> ./start-docker-lxc.sh
-> ./docker-enter.sh`
+> `cd /vagrant/lxc-attach`
+> `./install.sh`
+> `sudo su -`
+> `./start-docker-lxc.sh`
+> `./docker-enter.sh`
 
-If you want to run the docker deamon in default mode again, just run
-> ./start-docker-default.sh
+If you want to run the docker daemon in default mode again, just run
+> `./start-docker-default.sh`
 
 [docker]: http://docker.io
-[cc-blog]: https://blog.codecentric.de/en/2014/02/docker-registry-run-private-docker-image-repository/
+[cc-blog]: https://blog.codecentric.de/en/
+>>>>>>> Updated README.md
 [lxc]: http://linuxcontainers.org/
 [vagrant]: http://www.vagrantup.com
 [docker-install-doc]: http://docs.docker.io/en/latest/installation/
