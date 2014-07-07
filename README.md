@@ -21,6 +21,7 @@ Docker builds upon [Linux Containers][lxc] (LXC) and thus only runs on Linux. In
 
 If you decide to run the demo inside a Vagrant box, please install Vagrant accordingly. The Vagrantfile provided requires Vagrant version 1.4.0 or higher, because starting from that version Docker can be automatically installed. As provider, VirtualBox is assumed. Once Vagrant is installed, just run
 > `vagrant up; vagrant ssh`
+
 > `cd /vagrant`
 
 in the root directory. Then follow the same instructions as for native Linux.
@@ -35,6 +36,7 @@ If you decide to run the demo on a native Linux, please install Docker according
 
 In the first step we need a test container that we can enter. In the `docker` directory exists a `Dockerfile` that builds an ubuntu 13.04 image. When a container of that image is started a sshd process will be started via supervisord. To build and start the test container, just run
 > `cd /vagrant/docker`
+
 > `./run.sh`
 
 Now you should see the running container named supervisord via
@@ -46,7 +48,9 @@ Now you should see the running container named supervisord via
 
 In order to enter the test container via ssh, just run
 > `cd /vagrant/ssh`
+
 > `./install.sh`
+
 > `./docker-enter.sh`
 
 #### nsenter ####
@@ -61,7 +65,9 @@ In order to enter the test container via nsenter, just run
 
 In order to enter the test container via nsinit, just run
 > `cd /vagrant/nsinit`
+
 > `sudo su -`
+
 > `./install.sh`
 
 Now you have to log out and log in as root again because we set some environment variables for go-lang. Afterwards just run
@@ -72,9 +78,13 @@ Now you have to log out and log in as root again because we set some environment
 
 In order to enter the test container via lxc-attach, just run
 > `cd /vagrant/lxc-attach`
+
 > `./install.sh`
+
 > `sudo su -`
+
 > `./start-docker-lxc.sh`
+
 > `./docker-enter.sh`
 
 If you want to run the docker daemon in default mode again, just run
