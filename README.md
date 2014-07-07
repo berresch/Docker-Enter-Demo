@@ -15,7 +15,7 @@ Feel free to contact me for any questions or comments.
 
 ## Prerequisites ##
 
-Docker builds upon [Linux Containers][lxc] (LXC) and thus only runs on Linux. In order to allow you to also play with Docker on non-Linux machines, there are two ways to run this demo, i.e., inside a [Vagrant Box][vagrant] or directly on Linux. Please see the respective subsections below. For both cases you need to install `make`.
+Docker builds upon [Linux Containers][lxc] (LXC) and thus only runs on Linux. In order to allow you to also play with Docker on non-Linux machines, there are two ways to run this demo, i.e., inside a [Vagrant Box][vagrant] or directly on Linux. Please see the respective subsections below.
 
 ### Vagrant Box ###
 
