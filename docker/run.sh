@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -e
 
 sudo docker build -t demo/supervisord /vagrant/docker
 
