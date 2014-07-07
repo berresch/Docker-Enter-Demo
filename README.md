@@ -62,14 +62,16 @@ In order to enter the test container via nsenter, just run
 
 > `sudo su -`
 
+> `cd /vagrant/nsenter`
+
 > `./docker-enter.sh`
 
 #### nsinit ####
 
 In order to enter the test container via nsinit, just run
-> `cd /vagrant/nsinit`
-
 > `sudo su -`
+
+> `cd /vagrant/nsinit`
 
 > `./install.sh`
 
@@ -95,7 +97,6 @@ If you want to run the docker daemon in default mode again, just run
 
 [docker]: http://docker.io
 [cc-blog]: https://blog.codecentric.de/en/
->>>>>>> Updated README.md
 [lxc]: http://linuxcontainers.org/
 [vagrant]: http://www.vagrantup.com
 [docker-install-doc]: http://docs.docker.io/en/latest/installation/
